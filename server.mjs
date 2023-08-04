@@ -2,16 +2,21 @@ console.log("this is express server");
 
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
+const __dirname =path.resolve();
+
 
 const app = express();
-app.use(cors())
+app.use(cors());
 
-// http://192.168.1.106:3000
 
-app.get('/', (req, res) => {
-  console.log('Hello World!', new Date());
-  res.send('Hello World!' + new Date())
-})
+
+// http://192.168.1.106:3000/profile
+
+// app.get('/', (req, res) => {
+//   console.log('Hello World!', new Date());
+//   res.send('Hello World!' + new Date())
+// })
 app.get('/profile', (req, res) => {
   console.log('this is profile !', new Date());
   res.send('this is  profile !' + new Date())
@@ -50,6 +55,8 @@ app.get('/weather/:cityName', (req, res) => {
 
 })
 
+
+app.use(express.static(path.join(__dirname, 'public')))
 
 const PORT = process.env.PORT || 3000;
 
