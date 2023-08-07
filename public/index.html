@@ -11,20 +11,20 @@
 
 <body>
     <div class="container">
-        <div class="main">
+        <div class="main"><br>
         <h1>es6 Weather app</h1>
-        
+    
         <form onsubmit="getWeather(); return false">
 
-            <label for="cityName">city:</label>
-            <input type="text" name="cityName" id="cityName" placeholder="enter your city name">
+            <label for="cityName">Enter city Name:</label><br><br>
+            <input type="text" name="cityName" id="cityName"  placeholder="Enter City Name Here">
 
-            <br>
+            <br><br>
 
             <button type="submit">Get Weather</button>
 
 
-        </form>
+        </form><br>
         <div id="result">
 
         </div>
@@ -50,7 +50,7 @@
                 .catch(function (error) {
                     // handle error
                     console.log(error.data);
-                    document.querySelector("#result").innerHTML = "error in getting weather data"
+                    document.querySelector("#result").innerHTML = "Error in getting weather data"
                 })
         }
 
