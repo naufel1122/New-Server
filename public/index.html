@@ -6,26 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>es6 Weather app</h1>
+    <div class="container">
+        <div class="main">
+        <h1>es6 Weather app</h1>
+        
+        <form onsubmit="getWeather(); return false">
 
-    <form onsubmit="getWeather(); return false">
+            <label for="cityName">city:</label>
+            <input type="text" name="cityName" id="cityName" placeholder="enter your city name">
 
-        <label for="cityName">city:</label>
-        <input type="text" name="cityName" id="cityName" placeholder="enter your city name">
+            <br>
 
-        <br>
-
-        <button type="submit">Get Weather</button>
+            <button type="submit">Get Weather</button>
 
 
-    </form>
-    <div id="result">
+        </form>
+        <div id="result">
 
+        </div>
     </div>
-
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module">
 

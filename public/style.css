@@ -1,0 +1,18 @@
+body{
+    background-image: linear-gradient(to left top,#d83f87,#2A1B3D,#44318d,#E98074);
+    height: 100vh;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    min-height:600px;
+    min-width: 600px;
+
+}
